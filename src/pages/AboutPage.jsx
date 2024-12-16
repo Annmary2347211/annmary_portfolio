@@ -49,7 +49,7 @@ const AboutPage = () => {
             {/* Download Resume Button */}
             <div className="flex justify-center md:justify-start">
               <a
-                href="/resume.pdf" // Path to your PDF file
+                href="/annmary.pdf" // Path to your PDF file
                 download="Resume" // Suggested filename when downloading
                 className="mt-6 bg-[#d0d6f9] hover:bg-[#aeb8f0] text-[#5a57f5] font-semibold py-2 px-4 md:py-3 md:px-6 rounded-lg shadow-md"
               >

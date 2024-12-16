@@ -25,7 +25,7 @@ const AnimatedIntro = () => {
       {/* Main Content */}
       <div className="text-center z-10 relative">
         <h1
-          className="text-2xl  sm:text-3xl md:text-5xl sm:font-extrabold font-bold text-[#333] leading-snug min-h-[60px] sm:min-h-[80px] overflow-hidden whitespace-nowrap border-r-2 border-transparent animate-text-reveal"
+          className="text-2xl  sm:text-3xl md:text-5xl sm:font-extrabold font-extrabold text-[#333] leading-snug min-h-[60px] sm:min-h-[80px] overflow-hidden whitespace-nowrap border-r-2 border-transparent animate-text-reveal"
         >
           {displayedText}
         </h1>
