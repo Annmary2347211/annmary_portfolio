@@ -19,19 +19,24 @@ const ContactPage = () => {
     const handleSubmit = (e) => {
         e.preventDefault();
 
-        // EmailJS credentials
-        const serviceId = "service_9wbgy0c";
-        const templateId = "template_ksb0ei1";
-        const publicKey = "JhzdnrJkWdB-yQfry";
+        // Access credentials from environment variables
+        const serviceId = process.env.REACT_APP_EMAILJS_SERVICE_ID;
+        const templateId = process.env.REACT_APP_EMAILJS_TEMPLATE_ID;
+        const publicKey = process.env.REACT_APP_EMAILJS_PUBLIC_KEY;
 
         // Send email using EmailJS
         emailjs
-            .send(serviceId, templateId, {
-                to_name: "Annmary Baby", // Replace with your name or dynamic recipient
-                from_name: formData.name,
-                from_email: formData.email,
-                message: formData.message,
-            }, publicKey)
+            .send(
+                serviceId,
+                templateId,
+                {
+                    to_name: "Annmary Baby", // Replace with your name or dynamic recipient
+                    from_name: formData.name,
+                    from_email: formData.email,
+                    message: formData.message,
+                },
+                publicKey
+            )
             .then((response) => {
                 console.log("Email sent successfully!", response);
                 setIsSubmitted(true);
